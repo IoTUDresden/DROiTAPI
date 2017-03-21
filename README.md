@@ -1,6 +1,8 @@
 # DROiTAPI
 
 - This project is not maintained anymore.
+- The API requires ROSBridge running on the respective robot.
+- It was developed and tested for ROS Groovy.
 
 See the following publication for more detail:
 
