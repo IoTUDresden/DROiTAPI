@@ -1,0 +1,6 @@
+<launch>
+	<include file="$(find youbot_common)/launch/youbot_wrapper.launch" />
+	<include file="$(find youbot_common)/launch/youbot_joint_state_publisher.launch" />
+ 	<include file="$(find youbot_navigation_common)/launch/bringup_navigation.launch" />
+        <include file="$(find youbot_navigation_common)/launch/slam.launch" />
+</launch>

@@ -1,0 +1,10 @@
+<launch>
+	<node name="map_server" pkg="map_server" type="map_server" args="$(arg map_file)" />
+	<include file="$(find youbot_common)/launch/youbot_wrapper.launch" />
+	<include file="$(find youbot_common)/launch/youbot_joint_state_publisher.launch" />
+        <include file="$(find youbot_navigation_common)/launch/bringup_navigation_with_map.launch" />
+	<node name="tf_publisher" pkg="vicci_youbot" type="tf_node.py" />
+	<include file="$(find rosbridge_server)/launch/rosbridge_websocket.launch" />
+	<include file="$(find yocs_velocity_smoother)/launch/standalone.launch" />
+	<node name="youbot_adapter" pkg="vicci_youbot" type="youbot_stopper.py" />
+</launch>

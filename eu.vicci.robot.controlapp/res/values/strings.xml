@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">eu.vicci.turtlebot.controlapp</string>
+    <string name="action_settings">Settings</string>
+    
+    <string name="title_activity_main">Robot Gyroscope Control App</string>
+    <string name="title_activity_setting">Robot Gyroscope Control App - Settings</string>
+    
+    <string-array name="video_quality_select">
+        <item>Best</item>
+        <item>Good</item>
+        <item>Balanced</item>
+        <item>Fast</item>
+        <item>Very Fast</item>
+    </string-array>
+    <string-array name="video_quality_values">
+        <item>100</item>
+        <item>80</item>
+        <item>50</item>
+        <item>40</item>
+        <item>20</item>
+    </string-array>
+
+
+
+</resources>

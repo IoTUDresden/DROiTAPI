@@ -1,0 +1,5 @@
+<launch>
+	<include file="$(find rosbridge_server)/launch/rosbridge_websocket.launch" />
+  	<node name="map_server" pkg="map_server" type="map_server" args="$(arg map_file)" />
+	<node name="map_name_server" pkg="vicci_server" type="service.py" />
+</launch>

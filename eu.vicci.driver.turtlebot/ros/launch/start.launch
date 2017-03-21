@@ -1,0 +1,16 @@
+<launch>
+	<include file="$(find turtlebot_bringup)/launch/minimal.launch" />
+	<include file="$(find rosbridge_server)/launch/rosbridge_websocket.launch" />
+	<include file="$(find openni_launch)/launch/openni.launch" />
+ 		
+	<include file="$(find turtlebot_navigation)/launch/amcl_demo.launch" >
+		<arg name="map_file" value="/home/turtlebot/labor_new.yaml"/>
+		<arg name="initial_pose_x" value="1.542"/>
+		<arg name="initial_pose_y" value="1.975"/>
+		<arg name="initial_pose_a" value="0.215"/>
+	</include>
+	<node name="mjpeg_server" pkg="mjpeg_server" type="mjpeg_server" args="_port:=8181"/>
+	<node name="dock_ir_intepreter" pkg="vicci_turtle" type="getDockIR2.py" />
+	<node name="tf_publisher" pkg="vicci_turtle" type="tf_node.py" />
+	<node name="tf_odom_to_map_transform" pkg="vicci_turtle" type="tf_odom_to map_node.py" />
+</launch>
