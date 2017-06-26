@@ -48,7 +48,7 @@ public class RobotJavaToRosbridge extends WebSocketClient {
 	}
 	
 	public boolean isConnected(){
-		return (this.getReadyState()==WebSocket.READY_STATE_OPEN);
+		return (this.getReadyState()==WebSocket.READYSTATE.OPEN); 
 	}
 
 	@SuppressWarnings({ "rawtypes", "unchecked" })
