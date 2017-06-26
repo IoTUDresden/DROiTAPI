@@ -1,4 +1,6 @@
 # DROiTAPI
+[![Build Status](https://travis-ci.org/IoTUDresden/DROiTAPI.svg?branch=master)](https://travis-ci.org/IoTUDresden/DROiTAPI)
+
 
 See the following publication for more detail:
 
