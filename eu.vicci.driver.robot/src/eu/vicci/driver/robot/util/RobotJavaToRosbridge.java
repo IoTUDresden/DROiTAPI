@@ -10,6 +10,7 @@ import org.java_websocket.handshake.ServerHandshake;
 import com.google.gson.Gson;
 import com.google.gson.internal.LinkedTreeMap;
 
+import eu.vicci.driver.robot.location.Location;
 import eu.vicci.driver.robot.location.UnnamedLocation;
 
 
@@ -244,4 +245,11 @@ public class RobotJavaToRosbridge extends WebSocketClient {
 		return null;
 	}
 	
+	public Location getSimpleRosLocation() {		
+		return null;
+	}
+	
+	public Location getSimpleBeSpoonLocation() {
+		return null;
+	}
 }
