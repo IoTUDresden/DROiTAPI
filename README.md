@@ -15,4 +15,7 @@ Hints:
 Deployment:
 
 - run mvn deploy
+- copy repo/update-directory-index.sh to target/repo and execute it
+  - directory index.html will be created for all folders
 - copy the content of target/repo to the gh-pages branch
+
