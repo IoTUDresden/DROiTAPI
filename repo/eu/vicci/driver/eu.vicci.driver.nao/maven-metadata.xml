@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata>
+  <groupId>eu.vicci.driver</groupId>
+  <artifactId>eu.vicci.driver.nao</artifactId>
+  <versioning>
+    <versions>
+      <version>0.0.1-SNAPSHOT</version>
+    </versions>
+    <lastUpdated>20170801203529</lastUpdated>
+  </versioning>
+</metadata>
