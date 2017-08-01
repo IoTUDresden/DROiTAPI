@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata>
+  <groupId>eu.vicci.driver</groupId>
+  <artifactId>eu.vicci.driver.robot</artifactId>
+  <versioning>
+    <versions>
+      <version>0.0.1-SNAPSHOT</version>
+    </versions>
+    <lastUpdated>20170801200022</lastUpdated>
+  </versioning>
+</metadata>
