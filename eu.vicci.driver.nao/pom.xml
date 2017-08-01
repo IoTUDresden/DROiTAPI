@@ -5,6 +5,14 @@
 	<artifactId>eu.vicci.driver.nao</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>Nao RobotAPI </name>
+
+<parent>
+    <groupId>eu.vicci.driver</groupId>
+    <artifactId>eu.vicci.driver</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+</parent>
+
+
 	<description>Nao RobotAPI </description>
 	<dependencies>
 		<dependency>

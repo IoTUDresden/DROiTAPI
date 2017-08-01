@@ -5,6 +5,13 @@
 	<artifactId>eu.vicci.driver.turtlebot</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>Turtlebot RobotAPI</name>
+
+<parent>
+    <groupId>eu.vicci.driver</groupId>
+    <artifactId>eu.vicci.driver</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+</parent>
+
 	<description>Turtlebot RobotAPI</description>
 	<dependencies>
 		<dependency>

@@ -15,6 +15,11 @@
   		<module>eu.vicci.driver.turtlebot</module>
 		<module>eu.vicci.driver.youbot</module>
 	</modules>
+
+	<properties>
+		<built.repo.dir>${session.executionRootDirectory}/target/repo</built.repo.dir>
+	</properties>
+
 	<build>
 		<!--<sourceDirectory>src</sourceDirectory>-->
 		<plugins>
@@ -26,6 +31,15 @@
 					<target>1.6</target>
 				</configuration>
 			</plugin>
+
+    			<plugin>
+	        		<artifactId>maven-deploy-plugin</artifactId>
+			        <version>2.8.1</version>
+			        <configuration>
+			            <altDeploymentRepository>internal.repo::default::file://${built.repo.dir}</altDeploymentRepository>
+			        </configuration>
+    			</plugin>
+
 		</plugins>
 	</build>
 </project>

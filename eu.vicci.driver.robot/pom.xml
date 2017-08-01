@@ -6,6 +6,15 @@
 	<version>0.0.1-SNAPSHOT</version>
 	<name>RobotAPI</name>
 	<description>RobotAPI</description>
+
+<parent>
+    <groupId>eu.vicci.driver</groupId>
+    <artifactId>eu.vicci.driver</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+</parent>
+
+
+
 	<dependencies>
 		<dependency>
 			<groupId>com.google.code.gson</groupId>

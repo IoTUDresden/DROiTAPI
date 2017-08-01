@@ -11,3 +11,8 @@ Hints:
 - This project is not maintained anymore.
 - The API requires ROSBridge running on the respective robot.
 - It was developed and tested for ROS Groovy.
+
+Deployment:
+
+- run mvn deploy
+- copy the content of target/repo to the gh-pages branch
