@@ -6,7 +6,7 @@
 	<version>0.0.1-SNAPSHOT</version>
 	<name>DROiTAPI</name>
 	<description>A capability-based framework for programming small domestic service robots</description>
-	<!-- Important: parent pom packaging  -->
+	
 	<packaging>pom</packaging>
 
 	<modules>
@@ -18,10 +18,11 @@
 
 	<properties>
 		<built.repo.dir>${session.executionRootDirectory}/target/repo</built.repo.dir>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 	</properties>
 
 	<build>
-		<!--<sourceDirectory>src</sourceDirectory>-->
+
 		<plugins>
 			<plugin>
 				<artifactId>maven-compiler-plugin</artifactId>

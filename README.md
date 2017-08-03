@@ -15,4 +15,26 @@ Hints:
 Deployment:
 
 - run mvn deploy
+- copy repo/update-directory-index.sh to target/repo and execute it
+  - directory index.html will be created for all folders
 - copy the content of target/repo to the gh-pages branch
+- add the repo for this api to you project
+
+```
+<repositories>
+	<repository>
+		<id>DROiTAPI-Repo</id>
+		<url>https://IoTUDresden.github.io/DROiTAPI/repo</url>
+	</repository>
+</repositories>
+
+<dependencies>
+	<dependency>
+		<groupId>eu.vicci.driver</groupId>
+		<artifactId>eu.vicci.driver.turtlebot</artifactId>
+		<version>0.0.1-SNAPSHOT</version>
+	</dependency>
+</dependencies>
+```
+
+
