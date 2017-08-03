@@ -24,8 +24,8 @@ import eu.vicci.driver.robot.util.rosmsg.RosMsg;
  */
 public class TurtleBotJavaToRosbridge extends RobotJavaToRosbridge {
 
-	//private static final String TURTLEBOT_VELOCITY_TOPIC = "/mobile_base/commands/velocity";
-	private static final String TURTLEBOT_VELOCITY_TOPIC = "/key_cmd_vel";
+	private static final String TURTLEBOT_VELOCITY_TOPIC = "/mobile_base/commands/velocity";
+//	private static final String TURTLEBOT_VELOCITY_TOPIC = "/key_cmd_vel";
 
 	private static final String LED1_TOPIC = "/mobile_base/commands/led1";
 	private static final String LED2_TOPIC = "/mobile_base/commands/led2";
