@@ -186,5 +186,21 @@ public abstract class Engine extends AbstractRoboticDevice implements SemiAutoma
 	public boolean getIsConnected() {
 		return (socket!=null) && socket.isConnected();
 	}
+	
+	public Location getSimpleRosLocation() {
+		if (socket!=null) {
+			return socket.getSimpleRosLocation();
+		}
+		
+		return null;
+	}
+	
+	public Location getSimpleBeSpoonLocation() {		
+		if (socket!=null) {
+			return socket.getSimpleBeSpoonLocation();
+		}
+		
+		return null;
+	}
 
 }

@@ -34,6 +34,11 @@ public class TurtleBotJavaToRosbridge extends RobotJavaToRosbridge {
 	private static final String AUTODOCKING_TOPIC = "/autodocking";
 	private static final String MOVEBASE_STATUS_TOPIC = "/move_base/status";
 	private static final String TF_TRANSFORM_TOPIC = "/tf_map_transform";
+	
+	// BeSpoon Topics 
+	private static final String SRL_BESPOON_TOPIC = "/simpleRosLocation";
+	private static final String SBL_BESPOON_TOPIC = "/simpleBeSpoonLocation";
+	private static final String SNG_BESPOON_TOPIC = "/simple_coord_nav_goal";	
 
 	private static final long DOCKING_STRING_TIMEOUT = 4000;
 	private static long GOAL_TIMEOUT = 4000;
@@ -45,6 +50,8 @@ public class TurtleBotJavaToRosbridge extends RobotJavaToRosbridge {
 	private int navigationStatus = INVALID_STATUS;
 	private boolean doDocking;
 	private Docking docking;
+	private UnnamedLocation simpleRosLocation;
+	private UnnamedLocation simpleBespoonLocation;
 
 	public TurtleBotJavaToRosbridge(String ip, int port) {
 		super(ip, port);
@@ -76,6 +83,16 @@ public class TurtleBotJavaToRosbridge extends RobotJavaToRosbridge {
 			dockingInfo = msg.getData();
 			if (doDocking) docking.doDocking(dockingInfo);
 
+		} else if(topic.equals(SRL_BESPOON_TOPIC)){
+			Type msgType = new TypeToken<RosMsg<PoseMsg>>(){}.getType();
+			PoseMsg msg = (PoseMsg) ((RosMsg<PoseMsg>)gson.fromJson(message, msgType)).getMsg();
+			simpleRosLocation = msg.toUnnamedLocation();
+			
+		} else if(topic.equals(SBL_BESPOON_TOPIC)){
+			Type msgType = new TypeToken<RosMsg<PoseMsg>>(){}.getType();
+			PoseMsg msg = (PoseMsg) ((RosMsg<PoseMsg>)gson.fromJson(message, msgType)).getMsg();
+			simpleBespoonLocation = msg.toUnnamedLocation();
+			
 		}
 	}
 
@@ -93,6 +110,8 @@ public class TurtleBotJavaToRosbridge extends RobotJavaToRosbridge {
 		subscribe(AUTODOCKING_TOPIC, 500);
 		subscribe(MOVEBASE_STATUS_TOPIC, 500);
 		subscribe(TF_TRANSFORM_TOPIC);
+		subscribe(SRL_BESPOON_TOPIC);
+		subscribe(SBL_BESPOON_TOPIC);		
 		subscribe(RobotJavaToRosbridge.CANCEL_GOAL_TOPIC);
 		setLED1(0);
 		setLED2(0);
@@ -257,4 +276,12 @@ public class TurtleBotJavaToRosbridge extends RobotJavaToRosbridge {
 		publish(SOUND_TOPIC, call);
 	}
 
+	
+	public UnnamedLocation getSimpleRosLocation() {
+		return simpleRosLocation;
+	}
+	
+	public UnnamedLocation getSimpleBeSpoonLocation() {
+		return simpleBespoonLocation;
+	}
 }

@@ -13,6 +13,7 @@ import eu.vicci.driver.robot.grabbing.GrabbingTarget;
 import eu.vicci.driver.robot.grabbing.RemoteControlledGrabbing;
 import eu.vicci.driver.robot.grabbing.SemiAutomaticGrabbing;
 import eu.vicci.driver.robot.location.Location;
+import eu.vicci.driver.robot.location.UnnamedLocation;
 import eu.vicci.driver.robot.movement.Engine;
 import eu.vicci.driver.robot.movement.MovementTarget;
 import eu.vicci.driver.robot.movement.RemoteControlledMovement;
@@ -258,5 +259,23 @@ public class Robot implements NamedEntity, RoboticDevice, MovementTarget, SemiAu
 
 	protected Grabber getGrabber() {
 		return grabber;
+	}
+	
+	/**
+	 * Get the current location in simple coordinate
+	 * 
+	 * @return simpleRosLocation
+	 */
+	public Location getSimpleRosLocation() {
+		return engine.getSimpleRosLocation();
+	}
+
+	/**
+	 * Get the current location of bespoon in simple coordinate
+	 * 
+	 * @return simpleBeSpoonLocation
+	 */
+	public Location getSimpleBeSpoonLocation() {
+		return engine.getSimpleBeSpoonLocation();
 	}
 }
