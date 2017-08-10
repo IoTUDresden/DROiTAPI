@@ -18,7 +18,8 @@ Deployment:
 - copy repo/update-directory-index.sh to target/repo and execute it
   - directory index.html will be created for all folders
 - copy the content of target/repo to the gh-pages branch
-- add the repo for this api to you project
+
+# add the repo for this api to you project
 
 ```
 <repositories>
